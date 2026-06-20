@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Clients with KGB Groups across real estate and property services."
+    >
+    <title>Clients With Us | KGB Groups</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="KGB Groups home">
+        <img src="KGB-Groups-logo.png" alt="KGB Groups logo">
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="about.html">About</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="clients.html" aria-current="page">Clients With Us</a>
+        <a href="index.html#services">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="contact.html">Contact Us</a>
+    </header>
+
+    <main>
+      <section class="clients-hero">
+        <p class="eyebrow">Clients With Us</p>
+        <h1>Trusted property and service brands working with KGB Groups.</h1>
+      </section>
+
+      <section class="client-logo-grid" aria-label="Client logos">
+        <div class="client-logo-card">
+          <div class="text-logo urban-hive-logo" aria-label="Urban Hive Estates logo">
+            <span>Urban</span>
+            <strong>Hive Estates</strong>
+          </div>
+        </div>
+
+        <div class="client-logo-card">
+          <div class="text-logo shiv-logo" aria-label="The Shiv Properties logo">
+            <span>The</span>
+            <strong>Shiv Properties</strong>
+          </div>
+        </div>
+
+        <div class="client-logo-card">
+          <img
+            class="client-logo-image rajparis-logo"
+            src="https://rajparis.in/wp-content/uploads/2025/05/rajparis-logo-new.svg"
+            alt="Rajparis logo"
+          >
+        </div>
+
+        <div class="client-logo-card">
+          <div class="text-logo green-leaf-logo" aria-label="Green Leaf Realty logo">
+            <span>Green Leaf</span>
+            <strong>Realty</strong>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <div class="modal-backdrop" id="partnerModal" aria-hidden="true">
+      <div class="enquiry-modal" role="dialog" aria-modal="true" aria-labelledby="partnerModalTitle">
+        <button class="modal-close" type="button" id="modalCloseButton" aria-label="Close enquiry form">x</button>
+        <p class="eyebrow">Partner Enquiry</p>
+        <h2 id="partnerModalTitle">Join as a partner with KGB Groups.</h2>
+        <p class="modal-copy">
+          Fill in your details and our team will connect with you for collaboration opportunities.
+        </p>
+
+        <form class="partner-form" id="partnerForm">
+          <label>
+            <span>Full Name</span>
+            <input type="text" name="fullName" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Company Name</span>
+            <input type="text" name="companyName" autocomplete="organization" required>
+          </label>
+          <label>
+            <span>Designation</span>
+            <input type="text" name="designation" autocomplete="organization-title" required>
+          </label>
+          <label>
+            <span>Contact Number</span>
+            <input type="tel" name="contactNumber" autocomplete="tel" required>
+          </label>
+          <label>
+            <span>Email ID</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="full-field">
+            <span>Address</span>
+            <textarea name="address" rows="3" required></textarea>
+          </label>
+          <button class="primary-button full-field" type="submit">Submit Partner Enquiry</button>
+          <p class="form-status full-field" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="clients.js"></script>
+  </body>
+</html>

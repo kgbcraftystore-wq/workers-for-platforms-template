@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Admin Enquiries | KGB Groups</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="KGB Groups home">
+        <img src="KGB-Groups-logo.png" alt="KGB Groups logo">
+      </a>
+      <button class="header-cta" type="button" id="downloadEnquiriesButton">Download Excel Sheet</button>
+    </header>
+
+    <main>
+      <section class="admin-page-hero">
+        <p class="eyebrow">Admin Access</p>
+        <h1>Partner enquiry details.</h1>
+        <p>
+          New partner enquiries submitted from the Clients With Us popup are appended here.
+          Download exports all saved entries in one Excel-compatible CSV sheet.
+        </p>
+      </section>
+
+      <section class="admin-lock" id="adminLock">
+        <div>
+          <p class="eyebrow">Password Required</p>
+          <h2>Enter admin password.</h2>
+          <p>Use your admin password to view and download partner enquiry details.</p>
+        </div>
+        <form class="admin-login-form" id="adminLoginForm">
+          <input type="password" id="adminPasswordInput" placeholder="Admin password" required>
+          <button class="primary-button" type="submit">Unlock Admin</button>
+          <p class="form-status" id="adminLoginStatus" role="status"></p>
+        </form>
+      </section>
+
+      <section class="admin-table-section" id="adminContent" hidden>
+        <div class="admin-toolbar">
+          <div>
+            <p class="eyebrow">Saved Enquiries</p>
+            <h2 id="enquiryCount">0 enquiries</h2>
+          </div>
+          <div class="admin-actions">
+            <button class="secondary-button" type="button" id="refreshEnquiriesButton">Refresh</button>
+            <button class="danger-button" type="button" id="clearEnquiriesButton">Clear All Details</button>
+          </div>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Submitted At</th>
+                <th>Full Name</th>
+                <th>Company</th>
+                <th>Designation</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody id="enquiryTableBody"></tbody>
+          </table>
+          <p class="empty-state" id="emptyState">No partner enquiries are saved yet.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
